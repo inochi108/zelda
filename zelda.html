@@ -1,0 +1,115 @@
+﻿	
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gold Four - Game Project Shell -Prototype</title>
+        <script type="text/javascript" src="./animation.js"></script>
+        <script type="text/javascript" src="./assetmanager.js"></script>
+        <script type="text/javascript" src="./background.js"></script>
+        <script type="text/javascript" src="./entity.js"></script>
+        <script type="text/javascript" src="./gameengine.js"></script>
+        <script type="text/javascript" src="./link.js"></script>
+        <script type="text/javascript" src="./sword.js"></script>
+	<script type="text/javascript" src="./flyingsword.js"></script> 
+        <script type="text/javascript" src="./panel.js"></script> 
+        <script type="text/javascript" src="./box.js"></script>
+        <script type="text/javascript" src="./addbox.js"></script>
+        <script type="text/javascript" src="./addmonster.js"></script>
+        <script type="text/javascript" src="./sound.js"></script>
+        <script type="text/javascript" src="./gameover.js"></script>
+        <script type="text/javascript" src="./startgame.js"></script>
+        <script type="text/javascript" src="./potion.js"></script>
+        <script type="text/javascript" src="./maxheart.js"></script>
+	<script type="text/javascript" src="./ella.js"></script>
+		
+        <script type="text/javascript" src="./enemies/zeldaportal.js"></script>
+        <script type="text/javascript" src="./enemies/bat.js"></script>
+        <script type="text/javascript" src="./enemies/bat2.js"></script> 
+        <script type="text/javascript" src="./enemies/burningbat.js"></script>
+        <script type="text/javascript" src="./enemies/creature.js"></script>
+        <script type="text/javascript" src="./enemies/dyingbat.js"></script>
+        <script type="text/javascript" src="./enemies/egg.js"></script> 
+        <script type="text/javascript" src="./enemies/fairy.js"></script>
+        <script type="text/javascript" src="./enemies/firefly.js"></script>
+        <script type="text/javascript" src="./enemies/zelda.js"></script> 
+        <script type="text/javascript" src="./enemies/zelda2.js"></script> 
+        <script type="text/javascript" src="./enemies/chatmessage.js"></script> 
+        <script type="text/javascript" src="./enemies/wizard.js"></script> 
+        <script type="text/javascript" src="./enemies/wizardiceball.js"></script> 
+
+        <script type="text/javascript" src="./enemies/lizard.js"></script>
+        <script type="text/javascript" src="./enemies/lizardfireball.js"></script>
+        <script type="text/javascript" src="./enemies/mummy.js"></script>
+        <script type="text/javascript" src="./enemies/plant.js"></script>
+        <script type="text/javascript" src="./enemies/plant2.js"></script>
+        <script type="text/javascript" src="./enemies/plant3.js"></script>
+        <script type="text/javascript" src="./enemies/plantbullet.js"></script>
+        <script type="text/javascript" src="./enemies/plantbullet2.js"></script>
+        <script type="text/javascript" src="./enemies/plantbullet3.js"></script>
+        <script type="text/javascript" src="./enemies/portal.js"></script>
+        <script type="text/javascript" src="./enemies/spider.js"></script>
+        <script type="text/javascript" src="./enemies/spiderweb.js"></script>
+        <script type="text/javascript" src="./enemies/trap.js"></script>
+        <script type="text/javascript" src="./enemies/trapexplosion.js"></script>
+        <script type="text/javascript" src="./enemies/twinbat1.js"></script>
+        <script type="text/javascript" src="./enemies/twinbat2.js"></script>
+        <script type="text/javascript" src="./enemies/vampire.js"></script>
+        <script type="text/javascript" src="./enemies/vampirebat.js"></script>
+        <script type="text/javascript" src="./enemies/vampirebatcocoon.js"></script>
+        <script type="text/javascript" src="./enemies/vampirebatspin.js"></script>
+        <script type="text/javascript" src="./enemies/winningscene.js"></script>
+        <script type="text/javascript" src="./enemies/zombie.js"></script>
+        <script type="text/javascript" src="./enemies/zombiefire.js"></script>
+        <script type="text/javascript" src="./enemies/theend.js"></script>
+	<script type="text/javascript" src="./enemies/beenest.js"></script>
+	<script type="text/javascript" src="./enemies/arrow.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
+	<!--<script type="text/javascript" src="http://76.28.150.193:8888/socket.io/socket.io.js"></script>-->
+    </head>
+    <body>
+        <audio src="./sound/zombie.mp3" id="zombiesound" preload ="auto"></audio>
+        <audio src = "./sound/backgroundmusic1.mp3" id = "bgm" preload="auto"></audio>
+        <audio src="./sound/zeldarescue.mp3" id="rescue" preload ="auto"></audio>
+        <audio src="./sound/iceball.wav" id="iceball" preload="auto"></audio>
+		
+		<audio src="./sound/fairysound.mp3" id="fairySound" preload="auto"></audio>
+		<audio src="./sound/loz_recorder.wav" id="healingSound" preload="auto"></audio>
+		<audio src="./sound/loz_hit.wav" id="hitSound" preload="auto"></audio>
+		<audio src="./sound/loz_kill.wav" id="killSound" preload="auto"></audio>		
+		<audio src="./sound/loz_sword.wav" id="swordSound" preload="auto"></audio>
+		<audio src="./sound/loz_hurt.wav" id="hurtSound" preload="auto"></audio>
+		<audio src="./sound/loz_die.wav" id="dieSound" preload="auto"></audio>
+		<audio src="./sound/loz_get_heart.wav" id="getHeartSound" preload="auto"></audio>
+		<audio src="./sound/loz_shield.wav" id="shieldSound" preload="auto"></audio>
+		<audio src="./sound/loz_get_item.wav" id="getItemSound" preload="auto"></audio>		
+		<audio src="./sound/loz_flying_sword.wav" id="flyingSwordSound" preload="auto"></audio>
+		<audio src="./sound/goodbye.mp3" id="goodbyeSound" preload="auto"></audio>
+		 
+		<audio src="./sound/lizardfireball.wav" id="fireballSound" preload="auto"></audio>
+		<audio src="./sound/iceball.wav" id="iceballSound" preload="auto"></audio>
+				
+        <script>
+            document.getElementById("bgm").volume = .4;
+            document.getElementById("bgm").play();
+            document.getElementById("bgm").loop = true;
+			
+	    document.getElementById("rescue").volume = .9;
+            document.getElementById("iceball").volume = 1;
+            document.getElementById("zombiesound").volume = .9;			
+            document.getElementById("rescue").volume = .9;
+        </script>
+        <div>
+            <canvas id="panel" tabindex="1" width="544" height="100" style="border: 1px solid brown; background: black"></canvas>
+        </div>
+        <canvas id="gameWorld" tabindex="2" width="544" height="352" style="border: 1px solid brown; background: black"></canvas>
+        <p>Gold Four</p>
+        <p>Thuan Lam, Jowy Tran, Nok Him Nam, Feng Yang</p>
+        <p></p>
+        <p>Up/down/left/right arrow keys to move</p>
+        <p>Space to use the sword</p>
+		<p>M: toggle background music</p>
+		<p>P: Pause game</p>
+		<p>E: Ella the Rose Fairy</p>
+    </body>
+</html>
